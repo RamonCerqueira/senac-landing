@@ -1,6 +1,6 @@
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+<<<<<<< Updated upstream
     content: [
       "./app/**/*.{ts,tsx}",
       "./components/**/*.{ts,tsx}",
@@ -19,3 +19,26 @@ module.exports = {
     plugins: [],
   };
   
+=======
+  content: [
+    "./app/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./pages/**/*.{ts,tsx}",
+  ],
+  darkMode: false, // CORRETO: Desativa completamente o dark mode automático
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['Inter', 'Arial', 'Helvetica', 'sans-serif'], // Fonte base com fallback
+      },
+      colors: {
+        primary: "#003366",       // Azul institucional
+        senacOrange: "#FF6600",   // Laranja Senac
+        senacBlue: "#003366",     // Azul Senac (igual ao primary, mas útil como alias)
+      },
+    },
+  },
+  
+  plugins: [],
+};
+>>>>>>> Stashed changes

@@ -2,7 +2,11 @@ import './globals.css';
 import { ReactNode } from 'react';
 import { Inter } from 'next/font/google';
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['400', '700'], // você pode definir os pesos que quiser usar
+  variable: '--font-inter',
+});
 
 export const metadata = {
   title: 'Senac RN',
@@ -11,9 +15,9 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="pt-BR" suppressHydrationWarning>
+    <html lang="pt-BR" className={inter.variable}>
       <head />
-      <body className={`${inter.className} bg-white text-black dark:bg-gray-900 dark:text-white transition-colors duration-300`}>
+      <body className="font-sans bg-white text-black">
         {children}
       </body>
     </html>
