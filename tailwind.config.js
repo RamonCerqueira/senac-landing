@@ -6,7 +6,7 @@ module.exports = {
       "./components/**/*.{ts,tsx}",
       "./pages/**/*.{ts,tsx}",
     ],
-    darkMode: "class", // ativar dark mode via classe 'dark'
+    darkMode: "false", // ativar dark mode via classe 'dark'
     theme: {
       extend: {
         colors: {
