@@ -17,14 +17,14 @@ const HeroBanner = () => {
       <div className="max-w-3xl z-10 text-white">
         <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
           Transforme seu futuro <br />
-          com o <span className="text-senacOrange">Senac RN</span>
+          com o <span className="text-orange-700">Senac RN</span>
         </h1>
         <p className="text-lg md:text-xl mb-8">
           Cursos profissionais, tecnologia e inovação ao seu alcance.
         </p>
         <a
           href="#inscricao"
-          className="bg-senacOrange hover:bg-orange-600 text-white px-6 py-3 rounded-md font-semibold transition-all duration-300"
+          className="bg-orange-700 hover:bg-orange-600 text-white px-6 py-3 rounded-md font-semibold transition-all duration-300"
         >
           Inscreva-se agora
         </a>

@@ -1,4 +1,4 @@
-"use client";
+'use client'
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
@@ -46,27 +46,43 @@ const Header = () => {
           />
         </Link>
 
-        {/* Menu desktop */}
-        <nav className="hidden md:flex gap-6 text-sm font-medium text-senacBlue dark:text-white">
-          <button onClick={() => scrollTo("cursos")} className="hover:text-senacYellow transition-colors">Cursos</button>
-          <button onClick={() => scrollTo("inscricao")} className="hover:text-senacYellow transition-colors">Inscreva-se</button>
-          <button onClick={() => scrollTo("faq")} className="hover:text-senacYellow transition-colors">FAQ</button>
-          <button onClick={() => scrollTo("contato")} className="hover:text-senacYellow transition-colors">Contato</button>
+        {/* Menu Desktop */}
+        <nav className="hidden md:flex gap-6 text-sm font-medium items-center">
+          <button onClick={() => scrollTo("cursos")} className="hover:text-senacOrange transition-colors">Cursos</button>
+          <button onClick={() => scrollTo("inscricao")} className="hover:text-senacOrange transition-colors">Inscreva-se</button>
+          <button onClick={() => scrollTo("faq")} className="hover:text-senacOrange transition-colors">FAQ</button>
+          <button onClick={() => scrollTo("contato")} className="hover:text-senacOrange transition-colors">Contato</button>
+
+          {/* Botão AVA */}
+          <Link
+            href="/ModalLogin"
+            className="ml-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-orange-600 transition-colors"
+          >
+            Entrar no AVA
+          </Link>
         </nav>
 
-        {/* Botão mobile */}
+        {/* Botão Mobile */}
         <button className="md:hidden" onClick={() => setMenuOpen(!menuOpen)}>
           <Menu />
         </button>
       </div>
 
-      {/* Menu mobile */}
+      {/* Menu Mobile */}
       {menuOpen && (
-        <div className="md:hidden bg-white dark:bg-gray-900 px-4 pb-4 space-y-2 text-senacBlue dark:text-white">
+        <div className="md:hidden bg-white px-4 pb-4 space-y-2 text-blue-700">
           <button onClick={() => scrollTo("cursos")} className="block w-full text-left py-2">Cursos</button>
           <button onClick={() => scrollTo("inscricao")} className="block w-full text-left py-2">Inscreva-se</button>
           <button onClick={() => scrollTo("faq")} className="block w-full text-left py-2">FAQ</button>
           <button onClick={() => scrollTo("contato")} className="block w-full text-left py-2">Contato</button>
+
+          {/* Botão AVA Mobile */}
+          <Link
+            href="/ModalLogin"
+            className="block w-full text-center py-2 text-white bg-orange-600 rounded mt-2"
+          >
+            Entrar no AVA
+          </Link>
         </div>
       )}
     </header>

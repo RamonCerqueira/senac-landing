@@ -9,21 +9,23 @@ import ThemeToggle from "@/components/ThemeToggle";
 import { InscricaoForm } from "@/components/Inscricao";
 import { Hero } from "@/components/Hero";
 import { DepoimentosSection } from "@/components/Depoimento";
+import { DiferenciaisSection } from "@/components/DiferenciaisSection";
 
 export default function Home() {
   return (
-    <main className="bg-white dark:bg-gray-900 text-black dark:text-white">
+    <main className="bg-white text-black">
       <Header />
       <Hero />
       <CursosSection />
       <InscricaoForm />
+      <DiferenciaisSection />
       <DepoimentosSection />
       <FaqSection />
       <ContatoSection />
       <Footer />
       <WhatsappButton />
       <ModalLogin />
-      <ThemeToggle />
+      {/* <ThemeToggle /> */}
     </main>
   );
 }

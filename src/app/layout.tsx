@@ -17,7 +17,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="pt-BR" className={inter.variable}>
       <head />
-      <body className="font-sans bg-white text-black">
+      <body className="font-sans bg-white text-blue-700">
         {children}
       </body>
     </html>

@@ -23,7 +23,7 @@ const ModalLogin = () => {
         onClick={() => setOpen(true)}
         className="fixed bottom-20 right-6 bg-blue-600 text-white px-4 py-2 rounded-full shadow-md z-50 hover:bg-blue-700"
       >
-        Acessar Plataforma
+        Acessar Plataforma AVA
       </button>
 
       {open && (

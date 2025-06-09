@@ -23,14 +23,14 @@ export const FaqSection = () => {
   return (
     <section className="bg-white py-20 px-6" id="faq">
       <div className="max-w-3xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-senacBlue mb-10">Perguntas Frequentes</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-blue-700 mb-10">Perguntas Frequentes</h2>
 
         <div className="space-y-6">
           {faqs.map((faq, i) => (
             <div key={i} className="border-b pb-4">
               <button
                 onClick={() => setAberta(aberta === i ? null : i)}
-                className="w-full text-left font-semibold text-lg text-senacBlue flex justify-between items-center"
+                className="w-full text-left font-semibold text-lg text-blue-700 flex justify-between items-center"
               >
                 {faq.pergunta}
                 <span>{aberta === i ? '−' : '+'}</span>

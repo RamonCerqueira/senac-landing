@@ -1,10 +1,13 @@
-"use client";
-import { useState } from "react";
+'use client'
+
+import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useState } from "react";
 
 interface Curso {
   nome: string;
+  slug: string;
   descricao: string;
   imagem: string;
   detalhes: string;
@@ -13,48 +16,56 @@ interface Curso {
 const cursos = [
   {
     nome: "Programador Web",
+    slug: "devWeb",
     descricao: "HTML, CSS, JavaScript, React e mais.",
     detalhes: "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum ",
     imagem: "/cursos/1.jpg",
   },
   {
     nome: "Design Gráfico",
+    slug: "DGrafico",
     descricao: "Criação visual, Photoshop, Illustrator.",
     detalhes: "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum ",
     imagem: "/cursos/5.jpg",
   },
   {
     nome: "Gastronomia",
+    slug: "gastronomia",
     descricao: "Cozinha prática e profissional.",
     detalhes: "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum ",
     imagem: "/cursos/3.jpg",
   },
   {
     nome: "Atendente de Farmácia",
+    slug: "atFarma",
     descricao: "Treinamento técnico e humanizado.",
     detalhes: "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum ",
     imagem: "/cursos/7.jpg",
   },
   {
     nome: "Auxiliar Administrativo",
+    slug: "auxAdm",
     descricao: "Organização, rotinas e gestão.",
     detalhes: "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum ",
     imagem: "/cursos/8.jpg",
   },
   {
     nome: "Manutenção de Computadores",
+    slug: "ManPC",
     descricao: "Hardware, software e redes básicas.",
     detalhes: "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum ",
     imagem: "/cursos/4.jpg",
   },
   {
     nome: "Logística",
+    slug: "log",
     descricao: "Gestão de estoque e transportes.",
     detalhes: "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum ",
     imagem: "/cursos/2.jpg",
   },
   {
     nome: "Marketing Digital",
+    slug: "MktDig",
     descricao: "Redes sociais, tráfego e vendas.",
     detalhes: "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum ",
     imagem: "/cursos/6.jpg",
@@ -62,7 +73,7 @@ const cursos = [
 ];
 
 const CursosSection = () => {
-  
+
   const [cursoSelecionado, setCursoSelecionado] = useState<Curso | null>(null);
   const [abrirInscricao, setAbrirInscricao] = useState(false);
 
@@ -75,11 +86,13 @@ const CursosSection = () => {
   };
 
   const fecharModalInscricao = () => setAbrirInscricao(false);
+  const router = useRouter();
+
 
   return (
     <section id="cursos" className="py-20 bg-gray-100">
       <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center text-senacBlue mb-14">
+        <h2 className="text-4xl font-bold text-center text-blue-700 mb-14">
           Cursos em Destaque
         </h2>
 
@@ -101,15 +114,21 @@ const CursosSection = () => {
                 className="w-full h-40 object-cover"
               />
               <div className="p-5">
-                <h3 className="text-lg font-bold text-senacBlue mb-2">
+                <h3 className="text-lg font-bold text-blue-700 mb-2">
                   {curso.nome}
                 </h3>
                 <p className="text-gray-600 text-sm mb-4">{curso.descricao}</p>
                 <button
                   onClick={() => abrirModalCurso(curso)}
-                  className="text-senacOrange font-semibold text-sm hover:underline"
+                  className="text-orange-700 font-semibold text-sm hover:underline"
                 >
                   Saiba mais
+                </button>
+                <button
+                  onClick={() => router.push(`/cursos/${curso.slug}`)}
+                  className="text-blue-600 px-4 text-sm mt-2 hover:underline"
+                >
+                  Página do curso
                 </button>
               </div>
             </motion.div>
@@ -144,6 +163,14 @@ const CursosSection = () => {
             >
               Fazer inscrição
             </button>
+            
+            <button
+              onClick={() => router.push(`/cursos/${cursoSelecionado?.slug}`)}
+              className="ml-3 bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-300 transition"
+            >
+              Ver página do curso
+            </button>
+            
           </div>
         </div>
       )}

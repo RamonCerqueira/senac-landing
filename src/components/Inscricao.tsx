@@ -29,7 +29,7 @@ export const InscricaoForm = () => {
   return (
     <section
       id="inscricao"
-      className="relative min-h-[80vh] bg-cover bg-center bg-no-repeat flex items-center px-6"
+      className="relative min-h-[100vh] bg-cover bg-center bg-no-repeat flex items-center px-6"
       style={{ backgroundImage: "url('/inscricao.jpeg')" }}
     >
       {/* Overlay escuro para contraste */}
@@ -37,7 +37,7 @@ export const InscricaoForm = () => {
 
       {/* Formulário alinhado à esquerda */}
       <div className="relative z-10 max-w-lg w-full bg-white bg-opacity-90 rounded-xl p-8 shadow-lg text-left">
-        <h2 className="text-3xl font-bold text-senacBlue mb-8">Faça sua inscrição</h2>
+        <h2 className="text-3xl font-bold text-blue-700 mb-8">Faça sua inscrição</h2>
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
             <label className="block font-medium mb-1 text-sm">Nome completo</label>
@@ -47,7 +47,7 @@ export const InscricaoForm = () => {
               value={form.nome}
               onChange={handleChange}
               required
-              className="w-full border border-gray-300 rounded-md px-4 py-2 text-sm focus:ring-senacOrange focus:outline-none"
+              className="w-full border border-gray-300 rounded-md px-4 py-2 text-sm focus:ring-orange-700 focus:outline-none"
             />
           </div>
           <div>
@@ -58,7 +58,7 @@ export const InscricaoForm = () => {
               value={form.email}
               onChange={handleChange}
               required
-              className="w-full border border-gray-300 rounded-md px-4 py-2 text-sm focus:ring-senacOrange focus:outline-none"
+              className="w-full border border-gray-300 rounded-md px-4 py-2 text-sm focus:ring-orange-700 focus:outline-none"
             />
           </div>
           <div>
@@ -69,7 +69,7 @@ export const InscricaoForm = () => {
               value={form.telefone}
               onChange={handleChange}
               required
-              className="w-full border border-gray-300 rounded-md px-4 py-2 text-sm focus:ring-senacOrange focus:outline-none"
+              className="w-full border border-gray-300 rounded-md px-4 py-2 text-sm focus:ring-orange-700 focus:outline-none"
             />
           </div>
           <div>
@@ -79,7 +79,7 @@ export const InscricaoForm = () => {
               value={form.curso}
               onChange={handleChange}
               required
-              className="w-full border border-gray-300 rounded-md px-4 py-2 text-sm focus:ring-senacOrange focus:outline-none"
+              className="w-full border border-gray-300 rounded-md px-4 py-2 text-sm focus:ring-orange-700 focus:outline-none"
             >
               <option value="">Selecione...</option>
               {cursosDisponiveis.map((curso, idx) => (

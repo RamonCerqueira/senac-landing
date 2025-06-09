@@ -49,7 +49,7 @@ export const DepoimentosSection = () => {
         >
           <p className="text-lg italic mb-4">{depo.texto}</p>
           <p className="font-bold">{depo.nome}</p>
-          <p className="text-sm text-senacOrange">{depo.curso}</p>
+          <p className="text-sm text-orange-700">{depo.curso}</p>
         </motion.div>
 
         <div className="flex justify-center gap-6 mt-8">
