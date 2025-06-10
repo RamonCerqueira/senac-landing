@@ -7,7 +7,6 @@ import {
   Map,
   Navigation,
 } from "lucide-react";
-import { QRCodeCanvas } from "qrcode.react";
 
 export const ContatoSection = () => {
   const endereco = "Av. Sen. Salgado Filho, Natal - RN";
