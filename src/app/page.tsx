@@ -5,7 +5,6 @@ import { ContatoSection } from "@/components/ContatoSection";
 import Footer from "@/components/Footer";
 import WhatsappButton from "@/components/WhatsappButton";
 import ModalLogin from "@/components/ModalLogin";
-import ThemeToggle from "@/components/ThemeToggle";
 import { InscricaoForm } from "@/components/Inscricao";
 import { Hero } from "@/components/Hero";
 import { DepoimentosSection } from "@/components/Depoimento";
@@ -25,7 +24,6 @@ export default function Home() {
       <Footer />
       <WhatsappButton />
       <ModalLogin />
-      {/* <ThemeToggle /> */}
     </main>
   );
 }
