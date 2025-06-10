@@ -11,7 +11,7 @@ interface Curso {
   imagem: string;
   detalhes: string;
 }
-// Lista de cursos com imagem, título e descrição
+
 const cursos = [
   {
     nome: "Programador Web",
