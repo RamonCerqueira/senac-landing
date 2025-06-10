@@ -79,7 +79,6 @@ export const ContatoSection = () => {
                 includeMargin={true}
               />
             </div> */}
-
             <a
               href="https://wa.me/5584988887777"
               target="_blank"
