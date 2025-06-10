@@ -67,18 +67,6 @@ export const ContatoSection = () => {
               </a>
             </div>
 
-            {/* QR Code sem fundo branco */}
-            {/* <div className="mt-6 p-2 rounded-lg w-fit mx-auto shadow-md">
-              <p className="text-center font-semibold mb-2">Escaneie para abrir no Uber</p>
-              <QRCodeCanvas
-                value={uberUrl}
-                size={128}
-                bgColor="transparent"
-                fgColor="#ffffff"
-                includeMargin={true}
-              />
-            </div> */}
-
             <a
               href="https://wa.me/5584988887777"
               target="_blank"
